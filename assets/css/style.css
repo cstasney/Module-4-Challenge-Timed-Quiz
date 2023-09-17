@@ -4,6 +4,7 @@
 header {
     max-width: 100%;
     color: white;
+    font-size: 20px;
 }
 nav a {
     color: gold;
@@ -28,16 +29,17 @@ h1 {
 .inst {
     display: flex;
     max-width: 400px;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     text-align: center;
 }
 
-button {
+.start-button {
     display: flex;
     border-radius: 8px;
     background-color: silver;
-    height: 350x;
+    height: 30px;
     width: 100px;
     justify-content: center;
+    align-items: center;
 }
