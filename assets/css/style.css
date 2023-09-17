@@ -1,45 +1,146 @@
 * {
     background-color: black;
-}
-header {
-    max-width: 100%;
     color: white;
-    font-size: 20px;
-}
-nav a {
-    color: gold;
-    font-weight: bold;
+    box-sizing: border-box;
 }
 
-.timer-count {
+body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+
+}
+
+.reset-button {
+    font-size: 16px;
+    height: 30px;
+    line-height: 8px;
+    margin-top: 20px;
+}
+
+.results-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+button {
+    background-color: gold;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+}
+
+header {
     color: white;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 30px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 0 auto;
+    padding: 8px;
+    margin-top: 50px;
+    border-radius: 8px;
 }
 
-h1 {
-    display: flex;
-    color: gold;
+.quizcard {
+    width: 55vw;
+    height: 400px;
+}
+
+.grade-container {
+    width: 30vw;
+    height: 400px;
+}
+
+.card {
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid gold;
 }
 
 .inst {
-    display: flex;
-    max-width: 400px;
-    font-size: 15px;
-    color: white;
+    line-height: 20px;
     text-align: center;
 }
 
-.start-button {
-    display: flex;
-    border-radius: 8px;
-    background-color: silver;
-    height: 30px;
-    width: 100px;
-    justify-content: center;
-    align-items: center;
+.large-header {
+    font-size: 3.5em;
 }
+
+.timer {
+    height: 240px;
+    padding: 10px;
+    text-align: center;
+}
+
+.timer-text {
+    padding: 55px;
+}
+
+nav {
+    padding-top: 35px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+nav a {
+    color: gold;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 1183px) {
+    main {
+      flex-direction: column;
+    }
+  
+    .quizcard,
+    .grade-container {
+      width: 90vw;
+    }
+  
+    section {
+      background-color: white;
+      margin: 20px auto;
+      width: 92vw;
+    }
+  }
+  
+  @media screen and (max-width: 504px) {
+    .large-header {
+      font-size: 2em;
+    }
+  
+    .reset-button {
+      font-size: 12px;
+      width: 20ox;
+      
+    }
+  
+    .timer {
+      height: 200px;
+    }

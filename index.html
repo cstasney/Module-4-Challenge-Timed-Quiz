@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <script src="assets/js/script.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
+        <div class="large-header">Coding Quiz</div>
         <nav>
-            <a href ="#">View Highscores</a>
-            <p class="timer-count">60</p>
-            <p>Seconds Remaining</p>
+            <a href="#">View Highscores</a>
+            <p class="time"></p>
         </nav>
-        
     </header>
 
     <main>
         <section>
-            <h1>Coding Quiz Challenge</h1>
-            <p class="inst">Do you think you're the G.O.A.T. web developer? Take this timed quiz and find out! Incorrect answers will result in a time deduction! Choose carefully!</p>
-            <button class="start-button">Start Quiz</button>
+            <div class="card quizcard">
+                <div class="inst">Do you know the basic of web development? Take this timed quiz and find out! Incorrect
+                    answers will result in a time deduction! Choose carefully!</div>
+                <button class="start-button">Start Quiz</button>
+            </div>
         </section>
-    </main>
 
+        <section>
+            <div class="card grade-container">
+                <div class="results-container">
+                    <div>
+                        <h2>Correct Answers: <span class="correct"></span></h2>
+                        <h2>Incorrect Answers: <span class="incorrect"></span></h2>
+                    </div>
+                    <button class="reset-button">Reset Score</button>
+                </div>
+                <div class="card timer">
+                    <div class="timer-text">
+                        <div class="large-font timer-count">180 Seconds Remaining</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="assets/js/script.js"></script>
+    </main>
 </body>
+
 </html>
