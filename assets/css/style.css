@@ -1,146 +1,162 @@
-* {
-    background-color: black;
+:root {
+    background-color: black
+}
+
+li {
+    padding-bottom: 3px;
     color: white;
-    box-sizing: border-box;
+    list-style-type: none;
 }
 
-body {
-    font-family: Arial;
-    margin: 0;
+p {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    font-family: sans-serif;
+    flex-wrap: flex;
 }
 
-.reset-button {
-    font-size: 16px;
-    height: 30px;
-    line-height: 8px;
-    margin-top: 20px;
+h2 {
+    font-family: sans-serif;
+    margin-top: -.5rem;
+    color: white;
 }
 
-.results-container {
+input {
+    text-align: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
 button {
+    display: inline-block;
+    font-family: sans-serif;
     background-color: gold;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 3px double #cccccc;
     color: black;
-    cursor: pointer;
-    font-size: 2em;
-    letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 255px;
-    padding: 20px 52px;
     text-align: center;
-    transition-duration: 0.15s;
-    transition-property: background-color;
-    transition-timing-function: linear;
-    margin-top: 0.6em;
-}
-
-header {
-    color: white;
-    padding: 40px;
-    text-align: center;
-    border-bottom: 30px;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-section {
-    flex: 0 auto;
-    padding: 8px;
-    margin-top: 50px;
-    border-radius: 8px;
-}
-
-.quizcard {
-    width: 55vw;
-    height: 400px;
-}
-
-.grade-container {
-    width: 30vw;
-    height: 400px;
-}
-
-.card {
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid gold;
-}
-
-.inst {
-    line-height: 20px;
-    text-align: center;
-}
-
-.large-header {
-    font-size: 3.5em;
-}
-
-.timer {
-    height: 240px;
-    padding: 10px;
-    text-align: center;
-}
-
-.timer-text {
-    padding: 55px;
-}
-
-nav {
-    padding-top: 35px;
-    padding-left: 10px;
     font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    margin-top: 3px;
 }
 
-nav a {
-    color: gold;
-    font-weight: bold;
+button:hover {
+    box-shadow: 4px 3px 6px white;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz {
+    display: none;
+}
+
+#timer {
+    font-family: sans-serif;
+    background-color: gold;
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 325px;
+    margin-right: 325px;
     padding: 10px;
-
 }
 
-@media screen and (max-width: 1183px) {
-    main {
-      flex-direction: column;
-    }
-  
-    .quizcard,
-    .grade-container {
-      width: 90vw;
-    }
-  
-    section {
-      background-color: white;
-      margin: 20px auto;
-      width: 92vw;
-    }
-  }
-  
-  @media screen and (max-width: 504px) {
-    .large-header {
-      font-size: 2em;
-    }
-  
-    .reset-button {
-      font-size: 12px;
-      width: 20ox;
-      
-    }
-  
-    .timer {
-      height: 200px;
-    }
+#result {
+    display: none;
+}
+
+#gameover {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#highScore {
+    height: 1.5rem;
+    border: groove 2px;
+}
+
+#high-scorePage {
+    display: none;
+    width: 50%;
+    border: solid;
+    border-color: silver;
+    border-bottom-style: groove;
+    padding-bottom: .3rem;
+    background: black
+}
+
+#highscore-header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom-style: outset;
+    margin-bottom: .5rem;
+    background-color: gold;
+    color: black;
+    font-family: sans-serif;
+}
+
+#highscoreContainer {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#initials {
+    margin: .5rem;
+    height: 1.75rem;
+}
+
+#highscore-initials {
+    display: inline-block;
+    padding-left: 9.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#highscore-score {
+    float: right;
+    padding-right: 8.75rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#finalScore {
+    padding-bottom: 0.5rem;
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#endGameBtns {
+    display: none;
+}
+
+#questions {
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    font-family: sans-serif;
+    flex-wrap: flex;
+}

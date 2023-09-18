@@ -4,48 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Code Quiz Challenge</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <header>
-        <div class="large-header">Coding Quiz</div>
-        <nav>
-            <a href="#">View Highscores</a>
-            <p class="time"></p>
-        </nav>
-    </header>
+    <div class="container">
 
-    <main>
-        <section>
-            <div class="card quizcard">
-                <div class="inst">Do you know the basic of web development? Take this timed quiz and find out! Incorrect
-                    answers will result in a time deduction! Choose carefully!</div>
-                <button class="start-button">Start Quiz</button>
-            </div>
-        </section>
+        <div id="home">
+            <h2>This timed quiz will assess your progress</h2>
+            <h2>in your web development bootcamp.</h2>
+            <h2>Incorrect answers will decrease your remaining time.</h2>
+            <button id="startbtn">Start Quiz</button>
+            <button id="startPageHighscore" onclick="showHighscore()">Previous Scores</button>
+        </div>
 
-        <section>
-            <div class="card grade-container">
-                <div class="results-container">
-                    <div>
-                        <h2>Correct Answers: <span class="correct"></span></h2>
-                        <h2>Incorrect Answers: <span class="incorrect"></span></h2>
-                    </div>
-                    <button class="reset-button">Reset Score</button>
+        <div id="quiz">
+            <div id="timer">Begin!</div>
+            <div id="questions">Questions Placeholder</div>
+            <button id="a" onclick="checkAnswer('a')">A</button>
+            <button id="b" onclick="checkAnswer('b')">B</button>
+            <button id="c" onclick="checkAnswer('c')">C</button>
+            <button id="d" onclick="checkAnswer('d')">D</button>
+            <div id="result"></div>
+        </div>
+        <div id="gameover">
+
+            <div id="finalScore"></div>
+            <input type="text" size="40" placeholder="Enter you initials for high score" id="initials" />
+            <button id="submitScore">Submit Score</button>
+        </div>
+        <div id=highscoreContainer>
+            <div id="high-scorePage">
+                <div id="highscore-header">
+                    <h3>Initials</h3>
+                    <h3>Score</h3>
                 </div>
-                <div class="card timer">
-                    <div class="timer-text">
-                        <div class="large-font timer-count">180 Seconds Remaining</div>
-                    </div>
-                </div>
+                <div id="highscore-initials"></div>
+                <div id="highscore-score"></div>
             </div>
-        </section>
-
-        <script src="assets/js/script.js"></script>
-    </main>
+            <div id="endGameBtns">
+                <button id="playAgain" onclick="replayQuiz()">Play Again</button>
+                <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
