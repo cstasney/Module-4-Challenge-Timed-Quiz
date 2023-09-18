@@ -45,7 +45,7 @@ var quizQuestions = [{
     correctAnswer: "a"
 },
 {
-    question: "Which symtax is correct for linking an class element to CSS?",
+    question: "Which symtax is correct for linking a class element to CSS?",
     choiceA: ".class",
     choiceB: "#class",
     choiceC: "*class",
@@ -189,12 +189,15 @@ function checkAnswer(answer) {
 
     if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
         score++;
-        confirm("Is this your final answer?");
         currentQuestionIndex++;
         generateQuizQuestion();
         //ask if you're sure and display next question
     } else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
-        confirm("Is this your final answer?")
+            timeLeft = timeLeft -40; 
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+                showScore();
+            }
         currentQuestionIndex++;
         generateQuizQuestion();
         // show final score if last question

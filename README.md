@@ -1,58 +1,98 @@
-# Module 04 Mini-Project: Word Guess
+# 04 Web APIs: Code Quiz
 
-In this activity, you will work with a group to build a game using JavaScript and Web APIs.
+## Your Task
 
-## Instructions
+At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 
-The completed application should meet the following criteria:
+To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
-* As a user, I want to start the game by clicking on a button. 
+This week’s coursework will equip you with all the skills you need to succeed in this assignment.
 
-* As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
+## User Story
 
-* As a user, I want the game to be timed. 
+```
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+```
 
-* As a user, I want to win the game when I have guessed all the letters in the word.
+## Acceptance Criteria
 
-* As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
+```
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score
+```
 
-* As a user, I want to see my total wins and losses on the screen. 
+## Mock-Up
 
-### Specifications
+The following animation demonstrates the application functionality:
 
-* When a user presses a letter key, the user's guess should be captured as a key event.
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
 
-* When a user correctly guesses a letter, the corresponding blank "_" should be replaced by the letter. For example, if the user correctly selects "a", then "a _ _ a _" should appear. 
+## Grading Requirements
 
-* When a user wins or loses a game, a message should appear and the timer should stop. 
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+>
+> * A repository that has no code
+>
+> * A repository that includes a unique name but nothing else
+>
+> * A repository that includes only a README file but nothing else
+>
+> * A repository that only includes starter code
 
-* When a user clicks the start button, the timer should reset. 
+This Challenge is graded based on the following criteria: 
 
-* When a user refreshes or returns to the brower page, the win and loss counts should persist.
+### Technical Acceptance Criteria: 40%
 
-## 💡 Notes
+* Satisfies all of the preceding acceptance criteria.
 
-Refer to the documentation:
+### Deployment: 32%
 
-* [MDN Web Docs on KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+* Application deployed at live URL.
 
-* [MDN Web Docs on Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+* Application loads with no errors.
 
-* [MDN Web Docs on loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+* Application GitHub URL submitted.
 
-* [MDN Web Docs on setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+* GitHub repository contains application code.
 
-* [MDN Web Docs on clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
+### Application Quality: 15%
 
-* [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* Application user experience is intuitive and easy to navigate.
 
-## 🏆 Bonus
+* Application user interface style is clean and polished.
 
-If you have completed this activity, work through the following challenge with your group to further your knowledge:
+* Application resembles the mock-up functionality provided in the Challenge instructions.
 
-* How can you add a reset button to set the win and loss counts back to zero? 
+### Repository Quality: 13%
 
-Use [Google](https://www.google.com) or another search engine to research this.
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
+
+## Review
+
+You are required to submit BOTH of the following for review:
+
+* The URL of the functional, deployed application.
+
+* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
 ---
 
